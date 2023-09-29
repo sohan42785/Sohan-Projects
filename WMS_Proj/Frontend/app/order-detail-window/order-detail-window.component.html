@@ -1,0 +1,60 @@
+<p>Order-detail-window works!</p>
+
+<div *ngIf= "orders">
+    <h1 style="font-size: 40px;">Order Details</h1>
+    
+    <h2>Order#: {{orders.orderId}}</h2>
+    <div class="card-container">
+
+        <div class="card">
+            <div class="card-header">
+                <h1>Customer Details</h1>
+            </div>
+            <div class="card-body">
+                <h3>Customer name: Name</h3>
+                <h3>Customer address: Address</h3>
+                <h3>Any other info: [info]</h3>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header">
+                <h2>Items</h2>
+            </div>
+            <div class="card-body">
+                <Table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th scope="col">Item ID</th>
+                            <th scope="col">Item Name</th>
+                            <th scope="col">Item Quantity</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                123
+                            </td>
+                            <td>
+                                item1
+                            </td>
+                            <td>
+                                1000
+                            </td>
+                        </tr>
+                    </tbody>
+                </Table>
+                <button>
+                    Ship Order
+                </button>
+                <button style="margin-left: 10px;">
+                    Cancel Order
+                </button>
+            </div>
+        </div>
+    
+    </div>
+
+</div>
+
+
+<button type="button" (click)="goBack()">Go Back</button>
